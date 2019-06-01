@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: itoken-zuul
+
+server:
+  port: 8769
+
+zuul:
+  routes:
+    backend-admin:
+      path: /backend/admin/**
+      # serviceId: itoken-web-admin
+      url: http://10.0.2.242:8601
+    backend-posts:
+      path: /backend/posts/**
+      # serviceId: itoken-web-posts
+      url: http://10.0.2.242:8602
